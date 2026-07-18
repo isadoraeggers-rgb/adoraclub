@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <rect width="500" height="500" fill="#9BB0BD"/>
+
+  <!-- tail -->
+  <path d="M330 330 C 400 320, 420 260, 390 210 C 370 178, 400 165, 415 178"
+        stroke="#41525f" stroke-width="26" stroke-linecap="round" fill="none"/>
+
+  <!-- body -->
+  <path d="M175 345
+           C 150 345, 132 320, 132 292
+           C 132 250, 160 230, 200 230
+           L 300 230
+           C 340 230, 368 250, 368 292
+           C 368 320, 350 345, 325 345
+           Z"
+        fill="#41525f"/>
+
+  <!-- head -->
+  <circle cx="250" cy="190" r="72" fill="#41525f"/>
+
+  <!-- ears -->
+  <path d="M196 148 L172 90 L228 128 Z" fill="#41525f"/>
+  <path d="M304 148 L328 90 L272 128 Z" fill="#41525f"/>
+  <path d="M198 138 L182 104 L216 126 Z" fill="#9BB0BD"/>
+  <path d="M302 138 L318 104 L284 126 Z" fill="#9BB0BD"/>
+
+  <!-- closed happy eyes -->
+  <path d="M214 190 Q226 178 238 190" stroke="#9BB0BD" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M262 190 Q274 178 286 190" stroke="#9BB0BD" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+  <!-- nose -->
+  <path d="M244 208 L256 208 L250 216 Z" fill="#f5f0af"/>
+
+  <!-- whiskers -->
+  <path d="M175 205 L120 198" stroke="#f5f0af" stroke-width="4" stroke-linecap="round"/>
+  <path d="M175 216 L118 220" stroke="#f5f0af" stroke-width="4" stroke-linecap="round"/>
+  <path d="M325 205 L380 198" stroke="#f5f0af" stroke-width="4" stroke-linecap="round"/>
+  <path d="M325 216 L382 220" stroke="#f5f0af" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- paws holding book -->
+  <ellipse cx="196" cy="320" rx="26" ry="20" fill="#41525f"/>
+  <ellipse cx="304" cy="320" rx="26" ry="20" fill="#41525f"/>
+  <path d="M186 312 L186 326 M196 310 L196 326 M206 312 L206 326" stroke="#9BB0BD" stroke-width="3" stroke-linecap="round"/>
+  <path d="M294 312 L294 326 M304 310 L304 326 M314 312 L314 326" stroke="#9BB0BD" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- open book -->
+  <path d="M148 300 C 190 282, 220 282, 250 300 L250 340 C 220 324, 190 324, 148 340 Z" fill="#f5f0af"/>
+  <path d="M352 300 C 310 282, 280 282, 250 300 L250 340 C 280 324, 310 324, 352 340 Z" fill="#f5f0af"/>
+  <path d="M250 300 L250 340" stroke="#41525f" stroke-width="3"/>
+  <path d="M165 296 L228 288 M165 306 L228 300 M165 316 L228 312" stroke="#41525f" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+  <path d="M335 296 L272 288 M335 306 L272 300 M335 316 L272 312" stroke="#41525f" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+
+  <!-- back paws peeking -->
+  <ellipse cx="176" cy="336" rx="22" ry="16" fill="#41525f"/>
+  <ellipse cx="324" cy="336" rx="22" ry="16" fill="#41525f"/>
+  <ellipse cx="176" cy="333" rx="6" ry="5" fill="#f5f0af"/>
+  <ellipse cx="184" cy="330" rx="6" ry="5" fill="#f5f0af"/>
+  <ellipse cx="324" cy="333" rx="6" ry="5" fill="#f5f0af"/>
+  <ellipse cx="316" cy="330" rx="6" ry="5" fill="#f5f0af"/>
+</svg>

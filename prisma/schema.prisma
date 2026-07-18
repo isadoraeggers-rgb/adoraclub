@@ -1,0 +1,79 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  name         String
+  email        String   @unique
+  passwordHash String
+  bio          String?
+  createdAt    DateTime @default(now())
+
+  posts    Post[]
+  likes    Like[]
+  comments Comment[]
+}
+
+enum PostType {
+  PROGRESS
+  REVIEW
+}
+
+enum ProgressUnit {
+  PERCENT
+  PAGE
+}
+
+model Post {
+  id         String       @id @default(cuid())
+  type       PostType
+  bookTitle  String
+  bookAuthor String?
+  content    String?
+  rating     Int?
+  progressUnit  ProgressUnit?
+  progressValue Int?
+  totalPages    Int?
+  createdAt  DateTime     @default(now())
+
+  authorId String
+  author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  likes    Like[]
+  comments Comment[]
+}
+
+model Like {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  postId String
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, userId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+
+  postId String
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  authorId String
+  author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+}
